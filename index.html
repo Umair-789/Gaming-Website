@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Gaming</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming News</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-4 text-center">Latest Gaming News</h1>
+        
+        <div id="newsList" class="list-group">
+            <!-- News articles will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Script to fetch and display news articles -->
+    <script>
+        // Simulated news data (replace this with actual dynamic fetching from backend)
+        const newsData = [
+            { "title": "Exciting New Game Release", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+            { "title": "Update Patch Notes", "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+            { "title": "Interview with Game Developer", "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris." }
+        ];
+
+        // Function to populate news articles dynamically
+        function populateNews() {
+            let newsList = document.getElementById('newsList');
+            newsList.innerHTML = '';
+
+            newsData.forEach(article => {
+                let newsItem = `
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <h5 class="mb-1">${article.title}</h5>
+                        <p class="mb-1">${article.description}</p>
+                    </a>
+                `;
+                newsList.innerHTML += newsItem;
+            });
+        }
+
+        // Call function on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            populateNews();
+        });
+    </script>
+</body>
+</html>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
